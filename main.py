@@ -1,6 +1,7 @@
 import arcade
 import random
 import math
+from constants import *
 
 # Constants
 SCREEN_WIDTH = 800
@@ -12,14 +13,14 @@ TARGET_SCORE = 20
 LIVE_COUNT = 3
 
 # Assets
-player_texture = "assets/player.png"
-enemy_texture = "assets/enemy.png"
-shot_texture = "assets/shot.png"
-player_hit_sound = "assets/player_hit.wav"
-player_shoot_sound = "assets/player_shoot.wav"
-enemy_hit_sound = "assets/enemy_hit.wav"
-win_sound = "assets/win.wav"
-lose_sound = "assets/lose.wav"
+player_texture = arcade.load_texture("assets/player.png")
+enemy_texture = arcade.load_texture("assets/sprite_01.png")
+shot_texture = arcade.load_texture("assets/player_bullet.png")
+player_hit_sound = arcade.load_sound("assets/hey.mp3")
+player_shoot_sound = arcade.load_sound("assets/eh.mp3")
+enemy_hit_sound = arcade.load_sound("assets/super_cute.mp3")
+win_sound = arcade.load_sound("assets/new-recording.mp3")
+lose_sound = arcade.load_sound("assets/16-saludo.mp3")
 
 class Player:
     def __init__(self):
